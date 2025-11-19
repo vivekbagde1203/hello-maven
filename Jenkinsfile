@@ -2,6 +2,9 @@
 
 pipeline {
     agent any
+    tools {
+        maven 'maven3-9-11'
+    }
     stages {
         stage("Greet") {
             steps {
