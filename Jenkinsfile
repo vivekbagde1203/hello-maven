@@ -10,7 +10,7 @@ pipeline {
         }
         stage("Checkout"){
             steps {
-                checkout scm
+                git branch: 'master', url: 'https://github.com/vivekbagde1203/hello-maven.git'
             }
         }
         stage("Build"){
