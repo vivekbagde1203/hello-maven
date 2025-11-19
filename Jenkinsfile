@@ -8,5 +8,15 @@ pipeline {
                 hello("Vivek Bagde")
             }
         }
+        stage("Checkout"){
+            steps {
+                checkout scm
+            }
+        }
+        stage("Build"){
+            steps {
+                mavenBuild()
+            }
+        }
     }
 }
